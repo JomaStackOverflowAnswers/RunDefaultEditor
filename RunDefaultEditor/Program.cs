@@ -4,7 +4,6 @@ using System.Runtime.InteropServices;
 
 Console.WriteLine("███ Opening file with text Editor");
 string editor = string.Empty;
-bool wait = false;
 string parameters = string.Empty;
 while (!editor.Equals("exit!"))
 {
@@ -15,7 +14,7 @@ while (!editor.Equals("exit!"))
         break;
     }
     Console.WriteLine(@"Type [True] OR [False] to set if the editor is command line app:");
-    wait = bool.TryParse(Console.ReadLine(), out bool result);
+    _ = bool.TryParse(Console.ReadLine(), out bool wait);
     Console.WriteLine(@"Type additional parameters:");
     parameters = Console.ReadLine() ?? string.Empty;
 
